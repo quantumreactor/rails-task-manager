@@ -1,11 +1,12 @@
 <h1>My tasks</h1>
-
+<p>Esta horrible la app, necesita hermoseo con bootstrap, pero despuees. Parece Web 1.0</p>
 <%= Date.today %>
 <ul>
 <%  @tasks.each do |task| %>
-<li><%= task.completed %> - <%= link_to task.title, task_path(task) %> - <%= link_to "Edit", edit_task_path(task) %> - <%= link_to "Delete",  %></li>
+<li><%= task.completed %> - <%= link_to task.title, task_path(task) %> - <%= link_to "Edit", edit_task_path(task) %> - <%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Seguroski?"} %></li>
+
 <% end %>
 
 
-<%= link_to 'Add a new task', tasks_new_path%>
+<%= link_to 'Add a new task', new_task_path%>
 </ul>
