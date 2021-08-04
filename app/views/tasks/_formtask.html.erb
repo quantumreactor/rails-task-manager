@@ -1,0 +1,21 @@
+<!-- 
+<form method="post" action="/tasks">
+<label value="Title" for="title">Title
+<input type="text" name="title" id="tasktitle"></label><br>
+<label value="Details" for="details">Details
+<input type="text" name="details" id="taskdetails"></label><br>
+<input type="submit" value="Add task to list!">
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
+-->
+
+
+<%= form_for(@task) do |t| %>
+  <%= t.label :title %>
+  <%= t.text_field :title %>
+  <%= t.label :details %>
+  <%= t.text_area :details, size: "80x10" %>
+  <%= t.label :completed %>
+  <%= t.check_box :completed %>
+  <%= t.submit %>
+<% end %>
