@@ -10,7 +10,7 @@
 -->
 
 
-<%= form_for(@task) do |t| %>
+<%= simple_form_for(@task) do |t| %>
   <%= t.label :title %>
   <%= t.text_field :title %>
   <%= t.label :details %>
