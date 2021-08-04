@@ -1,0 +1,8 @@
+<h1>My tasks</h1>
+
+<%= Date.today %>
+<ul>
+<%  @tasks.each do |task| %>
+<li> <%= task.title %> </li>
+<% end %>
+</ul>
