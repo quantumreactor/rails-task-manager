@@ -12,10 +12,10 @@
 
 <%= simple_form_for(@task) do |t| %>
   <%= t.label :title %>
-  <%= t.text_field :title %>
+  <%= t.text_field :title %><br>
   <%= t.label :details %>
-  <%= t.text_area :details, size: "80x10" %>
+  <%= t.text_area :details, size: "80x10" %><br>
   <%= t.label :completed %>
-  <%= t.check_box :completed %>
-  <%= t.submit %>
+  <%= t.check_box :completed %><br>
+  <%= t.submit %><br>
 <% end %>
